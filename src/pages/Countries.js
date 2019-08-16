@@ -26,7 +26,10 @@ class Countries extends Component {
         {countries.length > 0 ? countries.map((country)=>{
           return(
             <article key={country._id}>
-              <img src = {country.image} alt={country.name} />
+              <Link to={`/countries/${country._id}`} >
+                <img src = {country.image} alt={country.name} />
+              </Link>
+              
               <p>{country.description}</p>
             </article>
           )
