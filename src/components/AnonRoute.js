@@ -11,7 +11,7 @@ const AnonRoute = (props) => {
           return <Component {...props}/>
         }}
         {...rest}
-      /> : <Redirect to='/contries' />}
+      /> : <Redirect to='/countries' />}
     </>
 
    

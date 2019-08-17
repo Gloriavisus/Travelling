@@ -22,15 +22,14 @@ class Countries extends Component {
     const {countries} = this.state;
     return (
       <div>
-        <h1>Countries list</h1> 
+        <h1>Lista de Paises</h1> 
         {countries.length > 0 ? countries.map((country)=>{
           return(
-            <article key={country._id}>
+            <article className="country-card" key={country._id}>
               <Link to={`/countries/${country._id}`} >
+                <p>{country.name}</p>
                 <img src = {country.image} alt={country.name} />
               </Link>
-              
-              <p>{country.description}</p>
             </article>
           )
         }) : <p>Loading ...</p>}

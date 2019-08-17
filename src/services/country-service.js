@@ -12,14 +12,14 @@ class CountryService {
     return this.countries.get('/countries')
       .then(({data}) => data);//porque no(response =>response)
   }
-  getOneContries(id){
+  getOneContry(id){
     return this.countries.get(`/countries/${id}`)
     .then (({data}) => data);
   }
-  createNewCountry(newCountry){
-    return this.countries.post('/countries/new', newCountry)
-    .then(({ data }) => data);
-  }
+  // createNewCountry(newCountry){
+  //   return this.countries.post('/countries/new', newCountry)
+  //   .then(({ data }) => data);
+  // }
   updateCountry(id, countryUpdated){
     return this.countries.put(`/countries/${id}/update`, countryUpdated)
     .then(({ data })=> data);
