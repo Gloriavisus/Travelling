@@ -10,9 +10,9 @@ class CountryService {
 
   getAllCountries() {
     return this.countries.get('/countries')
-      .then(({data}) => data);//porque no(response =>response)
+      .then(({data}) => data);
   }
-  getOneContry(id){
+  getOneCountry(id){
     return this.countries.get(`/countries/${id}`)
     .then (({data}) => data);
   }

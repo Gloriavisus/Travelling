@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import countryService from '../services/country-service';
+ import {Link} from 'react-router-dom';
 
 
  class CountryDetails extends Component {
@@ -8,7 +9,7 @@ import countryService from '../services/country-service';
    }
    componentDidMount(){
      const {id}= this.props.match.params;
-     countryService.getOneContry(id)
+     countryService.getOneCountry(id)
      .then((response)=>{
        this.setState({
          country:response
@@ -18,21 +19,17 @@ import countryService from '../services/country-service';
        console.log(error);
      })
    }
-  // const id = this.props.match.params.id
-  // componentDidMount se conecte con el service de getOneCountry (id)
-  // this.setState({country que venga del backend})
-
   render() {
     const{country} = this.state;
     console.log(country)
     return (
       <>
         {country ? (
-          <div>
-            <h1>Descripción</h1>
+          <div className="info">
             <h2>{country.name}</h2>
             <img src={country.image} alt={country.name}/>
             <p>{country.description}</p>
+            <Link to={`countries/${country.id}`}><i class="fab fa-gratipay"></i></Link> 
           </div> ):null}
       </>
     );

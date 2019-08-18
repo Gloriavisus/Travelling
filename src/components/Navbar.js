@@ -7,11 +7,11 @@ class Navbar extends Component {
     return (
       <div>
         {this.props.isLoggedIn ? (
-          <navbar className="navbar">
-            <Link className="navbar-link" to='/'><i class="fas fa-home"></i></Link>
-            <Link className="navbar-link" to='/me'><i class="far fa-user"></i></Link>
-            <p className="navbar-link" onClick={this.props.logout}><i class="fas fa-sign-out-alt"></i></p>
-          </navbar>
+          <nav className="navbar">
+            <Link className="navbar-link" to='/'><i className="fas fa-home"></i></Link>
+            <Link className="navbar-link" to='/me'><i className="far fa-user"></i></Link>
+            <p className="navbar-link" onClick={this.props.logout}><i className="fas fa-sign-out-alt"></i></p>
+          </nav>
         ) : (
           <>
             <Link to='/login'>Login</Link>

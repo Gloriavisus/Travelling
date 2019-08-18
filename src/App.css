@@ -1,37 +1,50 @@
-.navbar{
+.navbar *{
+  margin:0;
+}
+.navbar {
   display: flex;
   color:whitesmoke;
   background-color: #1E90FF;
   justify-content: space-between;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
-  padding:25px;
+  padding:20px;
 }
 .navbar-link {
   color:whitesmoke;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
 }
-h1{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: left;
+.container h1{
+  margin:10px;
+  text-shadow: 1px 1px;
 }
-.navbar *{
-  margin:0;
-}
-p{
-
-    margin-top: 0;
-    text-align: center;
-    font-size: 30px;
-    color: black;
-}
-.country-card{
+.country-card {
   margin: 23px 0;
   border-radius: 25px;
   padding: 14px;
   background-color: rgba(40, 130, 219, 0.2);
 }
-.container p{
-  justify-content: left;
+.country-card p {
+  color:black;
+  text-align: center;
+  font-size: 22px;
+}
+.info h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin:18px;
+  padding: 5px;
+  text-shadow: 1px 1px;
+}
+.info p {
+    margin-top: 18px;
+    text-align: left;
+    font-size: 17px;
+    color: black;
+}
+.info img{
+  filter: drop-shadow(2px 3px 3px #666);
+  }
+.info a{
+  color: rgba(33, 150, 243, 0.61);
+  text-decoration: none;
+  float: right;
+  font-size: 25px;
 }

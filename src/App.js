@@ -10,11 +10,14 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import CountryDetails from './pages/CountryDetails';
 import NotFound from './pages/NotFound';
+import Trip from './pages/Trip';
+import MyProfile from './pages/MyProfile';
 
 import AuthProvider from './contexts/auth-context.js';
 
 import './App.css';
 import 'milligram';
+
 
 class App extends Component {
   render() {
@@ -31,6 +34,8 @@ class App extends Component {
               <AnonRoute path="/login" exact component={Login} />
               <PrivateRoute path="/countries" exact component={Countries} />
               <PrivateRoute path="/countries/:id" exact component={CountryDetails} />
+              <PrivateRoute path="/trip" exact component={Trip}/>
+              <PrivateRoute path="/myprofile" component={MyProfile}/>
               <Route component={NotFound} />
             </Switch>
           </div>
