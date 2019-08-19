@@ -22,7 +22,7 @@ class Countries extends Component {
     const {countries} = this.state;
     return (
       <div>
-        <h1>Lista de Paises</h1> 
+        <h1>Elige tu destino</h1>
         {countries.length > 0 ? countries.map((country)=>{
           return(
             <article className="country-card" key={country._id}>

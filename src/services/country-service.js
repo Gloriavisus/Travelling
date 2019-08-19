@@ -3,7 +3,7 @@ import axios from 'axios';
 class CountryService {
   constructor() {
     this.countries = axios.create({
-      baseURL: `${process.env.REACT_APP_BASE_URL}`,//video axel Firebase//
+      baseURL: `${process.env.REACT_APP_BASE_URL}`,
       withCredentials: true,
     })
   }

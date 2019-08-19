@@ -29,7 +29,7 @@ import countryService from '../services/country-service';
             <h2>{country.name}</h2>
             <img src={country.image} alt={country.name}/>
             <p>{country.description}</p>
-            <Link to={`countries/${country.id}`}><i class="fab fa-gratipay"></i></Link> 
+            <Link to={`countries/${country.id}`}><i className="fab fa-gratipay"></i></Link> 
           </div> ):null}
       </>
     );

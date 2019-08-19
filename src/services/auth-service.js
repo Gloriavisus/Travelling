@@ -29,6 +29,12 @@ class AuthService {
     return this.auth.get('/auth/me')
     .then(response => response.data)
   }
+
+  updateProfile({hobbies,description}) {
+    return this.auth.put('/auth/myprofile/edit', {hobbies,description})
+    .then(response => response.data)
+  }
+
 }
 
 const authService = new AuthService();

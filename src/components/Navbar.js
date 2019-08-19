@@ -9,7 +9,7 @@ class Navbar extends Component {
         {this.props.isLoggedIn ? (
           <nav className="navbar">
             <Link className="navbar-link" to='/'><i className="fas fa-home"></i></Link>
-            <Link className="navbar-link" to='/me'><i className="far fa-user"></i></Link>
+            <Link className="navbar-link" to='/myprofile'><i className="far fa-user"></i></Link>
             <p className="navbar-link" onClick={this.props.logout}><i className="fas fa-sign-out-alt"></i></p>
           </nav>
         ) : (

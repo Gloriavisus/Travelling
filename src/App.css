@@ -15,6 +15,7 @@
 .container h1{
   margin:10px;
   text-shadow: 1px 1px;
+  font-size: 3.6rem;
 }
 .country-card {
   margin: 23px 0;
