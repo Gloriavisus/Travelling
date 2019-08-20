@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import withAuth from '../components/withAuth.js';
 import countryService from '../services/country-service.js';
 import { Link } from 'react-router-dom';
+import Navbar from "../components/Navbar";
 
 class Countries extends Component {
   state = {
@@ -22,6 +23,8 @@ class Countries extends Component {
     const {countries} = this.state;
     return (
       <div>
+      <Navbar />
+      <section className="content">
         <h1>Elige tu destino</h1>
         {countries.length > 0 ? countries.map((country)=>{
           return(
@@ -33,6 +36,7 @@ class Countries extends Component {
             </article>
           )
         }) : <p>Loading ...</p>}
+      </section>
       </div>
     )
   }

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route ,Switch} from 'react-router-dom';
 
-import Navbar from './components/Navbar.js';
 import PrivateRoute from './components/PrivateRoute.js';
 import AnonRoute from './components/AnonRoute.js';
 
@@ -27,10 +26,7 @@ class App extends Component {
     return (
       <Router>
         <AuthProvider>
-          <header>
-            <Navbar />
-          </header>
-            <div className="container">
+            <div>
             {/* <h1>Travelling</h1>  */}
             <Switch>
               <Route path='/' exact component={Home} />
