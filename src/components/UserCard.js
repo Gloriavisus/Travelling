@@ -9,7 +9,7 @@ export default class UserCard extends Component {
     this.setState({showMore: !this.state.showMore})
   }
   render() {
-    const {username, hobbies, description} = this.props.user;
+    const {username, hobbies, description, image} = this.props.user;
     console.log(this.props.user);
     return (
       <div>
@@ -19,13 +19,14 @@ export default class UserCard extends Component {
       {this.state.showMore && <>
         <p>{hobbies}</p>
         <p>{description}</p>
+        <img src={image} />
         <Link to={{
                     pathname: "/trip",
                     state: { countryTo: this.props.country.shortName }
                   }}>
-        Book</Link>
+        Seleccionar</Link>
       </>}
-        <button onClick={this.handleShow}>{this.state.showMore ? "hide" : "show"}</button>
+        <button onClick={this.handleShow}>{this.state.showMore ? "Seleccionar" : "Mostrar"}</button>
      </div>
     )
   }

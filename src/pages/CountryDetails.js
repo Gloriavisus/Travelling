@@ -54,30 +54,13 @@ class CountryDetails extends Component {
               <h3>Compañeros de viaje</h3>
               {this.state.users.map((user) => {
                 return (<div key={user._id}>
-               
                   <UserCard user={user} country={country}/>
-                   
-               
                   </div>
                 )
               })}
             </section>
           ) : null
         }
-        {/* {
-          showInformation ? (
-            <section className="información">
-              {this.state.users.map((user) => {
-                return (
-                  <>
-                    <p>{user.hobbies}</p>
-                    <p>{user.image}</p>
-                  </>
-                )
-              })}
-            </section>
-          ) : null
-        } */}
       </>
     );
   }

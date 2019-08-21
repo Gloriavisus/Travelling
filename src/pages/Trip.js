@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
+import tripService from '../services/trip-service'
+import withAuth from '../components/withAuth';
 
 class Trip extends Component {
 
@@ -9,6 +11,7 @@ class Trip extends Component {
     dateTo: '',
     dateFrom: '',
     countryFrom: '',
+    isSave: false
   }
 
   handleSubmit = (event) => {
@@ -29,6 +32,17 @@ class Trip extends Component {
       console.log(error);
 
     })
+  }
+
+  bookTrip = (trip) => {
+    console.log(trip)
+    tripService.createNewTrip(trip)
+    .then(() => {
+      this.setState({
+        isSave: true
+      })
+    })
+    .catch((e) => console.log(e))
   }
 
   handleOnChange = (event) => {
@@ -54,18 +68,22 @@ class Trip extends Component {
            </form>
            {trips.length > 0 ? (
             trips.map((trip) => {
-            return(<article>
+            return(<article key={trip.price}>
               <p>Salida: {trip.cityFrom}</p>
               <p>Llegada: {trip.cityTo}</p>
               <p>Precio: {trip.price}€</p>
               <p>Duración del viaje: {trip.fly_duration}</p>
+              {this.state.isSave ? <p>Buen Viaje!!</p>
+              :<a onClick={() => {this.bookTrip(trip) }}>Guardar</a>
+              }
             </article>)
            })
          ) : null}
+         
         </div>
       </>
     )
   }
 }
 
-export default Trip;
+export default withAuth(Trip);

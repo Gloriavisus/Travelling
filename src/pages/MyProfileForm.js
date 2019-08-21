@@ -8,9 +8,9 @@ import FileComponent from '../components/FileComponent';
 class MyProfileForm extends React.Component {
   state={
     username:this.props.user.username,
-    hobbies:'',
-    description:'',
-    image: '',
+    hobbies:this.props.user.hobbies,
+    description: this.props.user.description,
+    image: this.props.user.image,
     isRedirect: false,
   }
 
@@ -47,6 +47,7 @@ handleSubmit = (event)=>{
 
   render() {
     const {username, hobbies,description,isRedirect} = this.state 
+    console.log(this.props.user)
   return (
   <>
     <Navbar />
