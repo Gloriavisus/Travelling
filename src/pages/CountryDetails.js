@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import countryService from '../services/country-service';
 import Navbar from "../components/Navbar";
 import userService from '../services/user-service';
-
-
-
-
 
  class CountryDetails extends Component {
    state={
@@ -51,16 +48,19 @@ import userService from '../services/user-service';
           </div> ):null}
         {
           showPeople ?( 
-          <>
-            <h2>List people</h2>
+          <section className="viajeros">
+            <h3>Compañeros de viaje</h3>
             {this.state.users.map((user) => {
               return (
-                <p>user.username</p>
-                
-
+                <Link to={{
+                  pathname: "/trip",
+                  state: { countryTo: country.shortName }
+                }}>
+                  <p>{user.username}</p>
+                </Link>
               )
             })}
-          </>
+          </section>
           ) : null
         }
       </>

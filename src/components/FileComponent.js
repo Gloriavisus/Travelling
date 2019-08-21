@@ -26,8 +26,7 @@ class FileComponent extends Component {
       .child(filename)
       .getDownloadURL()
       .then(url => {
-        console.log(url)
-        this.setState({ avatarURL: url })
+        this.props.uploadUrl(url);
       });
   };
  
@@ -36,7 +35,7 @@ class FileComponent extends Component {
     return (
       <div>
         <form>
-          <label>Avatar:</label>
+          <label>Fotografía:</label>
           {isUploading && <p>Progress: {progress}</p>}
           {avatarURL && <img src={avatarURL} alt='name'/>}
           <FileUploader

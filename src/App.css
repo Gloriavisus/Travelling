@@ -81,7 +81,7 @@ p {
   padding: 12px;
 }
 .homepage a{
-  color:#8c2f12d4;
+  color: #151414d4;
   text-align: center;
   display: flex;
   margin-top: 86px;
@@ -165,7 +165,7 @@ input#password {
   
 }
 .login-page a{
-  color:#8c2f12d4;
+  color: #151414d4;;
   text-shadow: 0px 0px;
   border: 1px solid;
   background-color: #ffffffa8;
@@ -175,7 +175,7 @@ input#password {
 
 }
 .signup-page a{
-  color:#8c2f12d4;
+  color: #151414d4;
   text-shadow: 0px 0px;
   border: 1px solid;
   background-color: #ffffffa8;
@@ -208,11 +208,11 @@ input#password {
   text-shadow: 1px 1px;
 }
 .info p {
-    margin-top: 18px;
-    text-align: left;
-    font-size: 17px;
-    color: black;
-    padding: 12px;
+  margin-top: 18px;
+  text-align: left;
+  font-size: 17px;
+  color: black;
+  padding: 12px;
 }
 .info img{
   filter: drop-shadow(2px 3px 3px #666);
@@ -220,5 +220,72 @@ input#password {
 section.content {
   padding: 0 20px;
 }
+.fa-gratipay{
+  color:#1E90FF;
+  font-size: 26px;
+  float: right;
+  padding: 16px;
+  
+}
+.viajeros {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin:8px;
+  padding: 5px;
+}
+.viajeros p{
+  margin:8px;
+  color: black;
+}
+.miperfil h3{
+  color:black;
+  margin-top: 20px;
+}
+.miperfil{
+  padding: 20px;
+}
 
+.editar-perfil{
+  color:white;
+  padding:10px;
+  background-color: #1E90FF;
+  border: 1px solid;
+  border-radius: 15px;
+  margin-top: 36px;
+  float: right;
+  margin-right: 30px;
+}
+.editme{
+  padding: 20px;
+}
+.editme h3{
+  color:black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.editme button{
+  color:white;
+  background-color: #1E90FF;
+  border: 1px solid;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.viaje{
+  padding: 35px;
+}
+.viaje button{
+  background-color: #1E90FF;
+  border: 1px solid;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.viaje label{
+  color:black;
+  font-size: 20px;
+}
+.viaje input{
+  color:#000000b3;
+  border: 1px solid;
+  padding: 5px;
+  background: transparent;
+  margin-left: 8px;
+}
 

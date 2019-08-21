@@ -10,6 +10,7 @@ class MyProfileForm extends React.Component {
     username:this.props.user.username,
     hobbies:'',
     description:'',
+    image: '',
     isRedirect: false,
   }
 
@@ -19,11 +20,18 @@ handleChange = (event)=>{
     [name]: value,
   })
 }
+
+uploadUrl = (url) => {
+  this.setState({
+    image: url
+  })
+}
+
 handleSubmit = (event)=>{
   event.preventDefault();
-  const {hobbies, description}= this.state;
+  const {hobbies, description, image}= this.state;
   authService.updateProfile({
-    hobbies, description
+    hobbies, description, image
   })
   .then(response =>{
     this.props.getMe();
@@ -40,11 +48,12 @@ handleSubmit = (event)=>{
   render() {
     const {username, hobbies,description,isRedirect} = this.state 
   return (
-    <>
+  <>
+    <Navbar />
+    <section className="editme">
       <form onSubmit={this.handleSubmit}>
-        <Navbar />
         <div>
-          <FileComponent />
+          <FileComponent uploadUrl={this.uploadUrl}/>
           <h3>{username}</h3>
           <label htmlFor="hobbies">Hobbies</label>
           <input type="text" name="hobbies" value={hobbies} onChange={this.handleChange}/><br />
@@ -55,6 +64,7 @@ handleSubmit = (event)=>{
         <button type="submit">Guardar</button>
       </form>
       {isRedirect ? <Redirect to='/myprofile' /> : null}
+    </section>
     </>
   )
 }
