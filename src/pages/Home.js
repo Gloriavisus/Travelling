@@ -7,8 +7,8 @@ function Home() {
   return (
     <div className="homepage">
       <h2 >TRAVELLING</h2>
-      <Link to='/login'>Login</Link>
-      <Link to='/signup'>Signup</Link>
+      <Link to='/login'>Iniciar Sesion</Link>
+      <Link to='/signup'>Registrarse</Link>
     </div>
   )
 }

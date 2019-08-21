@@ -33,20 +33,20 @@ class Signup extends Component {
   render() {
     const { username, password } = this.state;
     return (
-      <>
+      <div className="signup-page">
         <form onSubmit={this.handleFormSubmit}>
-          <label htmlFor='username'>Username:</label>
+          <label htmlFor='username'>Nombre:</label>
           <input id='username' type='text' name='username' value={username} onChange={this.handleChange}/>
-          <label htmlFor='password'>Password:</label>
+          <label htmlFor='password'>Contraseña:</label>
           <input id='password' type='password' name='password' value={password} onChange={this.handleChange} />
-          <input type='submit' value='Signup' />
+          <button className="buttonsignup"type='submit'>Registrarse</button>
         </form>
 
-        <p>Already have account? 
-          <Link to={'/login'}> Login</Link>
+        <p>¿Ya tienes cuenta? 
+          <Link to={'/login'}> Iniciar sesion</Link>
         </p>
 
-      </>
+      </div>
     )
   }
 }

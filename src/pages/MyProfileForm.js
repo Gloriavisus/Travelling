@@ -3,7 +3,7 @@ import withAuth from '../components/withAuth';
 import authService from '../services/auth-service'
 import {Redirect} from 'react-router-dom';
 import Navbar from "../components/Navbar";
-
+import FileComponent from '../components/FileComponent';
 
 class MyProfileForm extends React.Component {
   state={
@@ -44,6 +44,7 @@ handleSubmit = (event)=>{
       <form onSubmit={this.handleSubmit}>
         <Navbar />
         <div>
+          <FileComponent />
           <h3>{username}</h3>
           <label htmlFor="hobbies">Hobbies</label>
           <input type="text" name="hobbies" value={hobbies} onChange={this.handleChange}/><br />

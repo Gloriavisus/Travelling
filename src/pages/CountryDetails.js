@@ -5,6 +5,8 @@ import userService from '../services/user-service';
 
 
 
+
+
  class CountryDetails extends Component {
    state={
      country: null,
@@ -17,12 +19,11 @@ import userService from '../services/user-service';
       return userService.getAllUsers()
       .then((users)=>{
         this.setState({
-          users: users
+          users: users,
+          country,
         })
       })
-       this.setState({
-         country: country
-       })
+     
      })
      .catch((error)=>{
        console.log(error);
@@ -55,6 +56,8 @@ import userService from '../services/user-service';
             {this.state.users.map((user) => {
               return (
                 <p>user.username</p>
+                
+
               )
             })}
           </>

@@ -20,6 +20,15 @@ import AuthProvider from './contexts/auth-context.js';
 import './App.css';
 import 'milligram';
 
+import firebase from "firebase";
+ 
+const config = {
+  apiKey: "AIzaSyAvLu57taqF2G9vhlTdNvmuFbgpFIEBhmk",
+  authDomain: "tra-velling.firebaseapp.com",
+  storageBucket: "gs://tra-velling.appspot.com/",
+};
+firebase.initializeApp(config);
+
 
 class App extends Component {
   render() {
@@ -29,7 +38,7 @@ class App extends Component {
             <div>
             {/* <h1>Travelling</h1>  */}
             <Switch>
-              <Route path='/' exact component={Home} />
+              <AnonRoute path='/' exact component={Home} />
               <AnonRoute path="/signup" exact component={Signup} />
               <AnonRoute path="/login" exact component={Login} />
               <PrivateRoute path="/countries" exact component={Countries} />
