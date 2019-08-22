@@ -47,7 +47,7 @@ handleSubmit = (event)=>{
 
   render() {
     const {username, hobbies,description,isRedirect} = this.state 
-    console.log(this.props.user)
+    // console.log(this.props.user)
   return (
   <>
     <Navbar />

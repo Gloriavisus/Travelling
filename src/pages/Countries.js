@@ -12,7 +12,7 @@ class Countries extends Component {
   componentDidMount(){
     countryService.getAllCountries()//recibe todos los countries del backend
       .then(response => {
-        console.log(response);
+        // console.log(response);
         this.setState({
           countries: response
         })

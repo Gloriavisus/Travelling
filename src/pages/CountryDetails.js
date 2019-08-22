@@ -37,7 +37,7 @@ class CountryDetails extends Component {
 
   render() {
     const { country, showPeople, showInformation } = this.state;
-    console.log(country)
+    // console.log(country)
     return (
       <>
         <Navbar />
@@ -54,6 +54,7 @@ class CountryDetails extends Component {
               <h3>Compañeros de viaje</h3>
               {this.state.users.map((user) => {
                 return (<div key={user._id}>
+                  {/* {console.log(country)} */}
                   <UserCard user={user} country={country}/>
                   </div>
                 )

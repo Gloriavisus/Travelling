@@ -19,10 +19,11 @@ class Trip extends Component {
     const {dateTo, dateFrom, countryFrom} = this.state;
     const dateFromFormated = dateFrom.split('-').reverse().join('/');
     const dateToFormated = dateTo.split('-').reverse().join('/');
-    const {countryTo} = this.props.location.state
+    const {countryTo} = this.props.location.state;
+    console.log("From Handle Submit:", this.props.location)
     axios.get(`https://api.skypicker.com/flights?flyFrom=${countryFrom}&to=${countryTo}&dateFrom=${dateFromFormated}&dateTo=${dateToFormated}&partner=picky&one_for_city=1`)
     .then((response) => {
-      console.log(response.data.data)
+      console.log("Trip Response:", response.data.data)
       const userFromAPI = response.data.data;
       this.setState({
         trips: userFromAPI,
@@ -35,7 +36,7 @@ class Trip extends Component {
   }
 
   bookTrip = (trip) => {
-    console.log(trip)
+    console.log("bookTrip:", trip)
     tripService.createNewTrip(trip)
     .then(() => {
       this.setState({
@@ -52,6 +53,8 @@ class Trip extends Component {
     })
   }
   render() {
+
+    console.log("Props from trip", this.props)
     const {dateTo, dateFrom, countryFrom, trips} = this.state;
     return (
     <>    

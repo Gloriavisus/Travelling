@@ -6,28 +6,26 @@ export default class UserCard extends Component {
   }
 
   handleShow = () => {
-    this.setState({showMore: !this.state.showMore})
+    this.setState({ showMore: !this.state.showMore })
   }
   render() {
-    const {username, hobbies, description, image} = this.props.user;
-    console.log(this.props.user);
+    const { username, hobbies, description, image } = this.props.user;
+    // console.log(this.props.user);
     return (
       <div>
-      <p>{username}</p>
-      
-
-      {this.state.showMore && <>
-        <p>{hobbies}</p>
-        <p>{description}</p>
-        <img src={image} />
-        <Link to={{
-                    pathname: "/trip",
-                    state: { countryTo: this.props.country.shortName }
-                  }}>
-        Seleccionar</Link>
-      </>}
+        <p>{username}</p>
+        {this.state.showMore && <>
+          <p>{hobbies}</p>
+          <p>{description}</p>
+          <img src={image} />
+          <Link to={{
+            pathname: "/trip",
+            state: { countryTo: this.props.country.shortName }
+          }}>
+            Seleccionar</Link>
+        </>}
         <button onClick={this.handleShow}>{this.state.showMore ? "Seleccionar" : "Mostrar"}</button>
-     </div>
+      </div>
     )
   }
 }
