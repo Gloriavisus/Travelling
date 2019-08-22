@@ -292,3 +292,13 @@ section.content {
 .trips {
   padding: 0 20px;
 }
+.img-contenedor{
+  height: 250px;
+  overflow: hidden;
+}
+      
+.img-contenedor img {
+  max-width: 100%;
+  top: -30%;
+  position: relative;
+}

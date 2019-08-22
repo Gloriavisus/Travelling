@@ -33,7 +33,7 @@ class MyProfile extends Component {
         <>
       <Navbar />
         <div className="miperfil">
-        {image ? <img src={image} alt={username} /> : null}
+        {image ? <div className="img-contenedor"><img src={image} alt={username} /></div> : null}
         <Link className='editar-perfil' to="/myprofile/edit">Editar perfil</Link>
         <h3>{username}</h3>
         <p>{hobbies}</p>
